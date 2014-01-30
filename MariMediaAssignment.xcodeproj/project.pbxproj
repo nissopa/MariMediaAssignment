@@ -14,13 +14,21 @@
 		B3655F14189ABB1C0029A94C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F13189ABB1C0029A94C /* main.m */; };
 		B3655F18189ABB1C0029A94C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F17189ABB1C0029A94C /* AppDelegate.m */; };
 		B3655F1B189ABB1C0029A94C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3655F19189ABB1C0029A94C /* Main.storyboard */; };
-		B3655F1E189ABB1C0029A94C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F1D189ABB1C0029A94C /* ViewController.m */; };
 		B3655F20189ABB1C0029A94C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3655F1F189ABB1C0029A94C /* Images.xcassets */; };
 		B3655F27189ABB1C0029A94C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F26189ABB1C0029A94C /* XCTest.framework */; };
 		B3655F28189ABB1C0029A94C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F07189ABB1C0029A94C /* Foundation.framework */; };
 		B3655F29189ABB1C0029A94C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F0B189ABB1C0029A94C /* UIKit.framework */; };
 		B3655F31189ABB1C0029A94C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3655F2F189ABB1C0029A94C /* InfoPlist.strings */; };
 		B3655F33189ABB1C0029A94C /* MariMediaAssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F32189ABB1C0029A94C /* MariMediaAssignmentTests.m */; };
+		B3655F3F189AC5020029A94C /* RegisterationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F3E189AC5020029A94C /* RegisterationViewController.m */; };
+		B3655F42189AC5190029A94C /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F41189AC5190029A94C /* TasksViewController.m */; };
+		B3655F46189AC9A10029A94C /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F45189AC9A10029A94C /* TaskCell.m */; };
+		B3655F4B189AC9D80029A94C /* CategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F4A189AC9D80029A94C /* CategoryView.m */; };
+		B3655F4F189ACA1F0029A94C /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F4E189ACA1F0029A94C /* DataBaseManager.m */; };
+		B3655F74189ACE3E0029A94C /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3655F72189ACE3E0029A94C /* TaskModel.xcdatamodeld */; };
+		B3655F83189ACF340029A94C /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F82189ACF340029A94C /* Tasks.m */; };
+		B3655F86189ACF350029A94C /* TasksCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F85189ACF350029A94C /* TasksCategory.m */; };
+		B3655F88189AD0120029A94C /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3655F87189AD0120029A94C /* CategoryView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +53,28 @@
 		B3655F16189ABB1C0029A94C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3655F17189ABB1C0029A94C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B3655F1A189ABB1C0029A94C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B3655F1C189ABB1C0029A94C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B3655F1D189ABB1C0029A94C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B3655F1F189ABB1C0029A94C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3655F25189ABB1C0029A94C /* MariMediaAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariMediaAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3655F26189ABB1C0029A94C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B3655F2E189ABB1C0029A94C /* MariMediaAssignmentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MariMediaAssignmentTests-Info.plist"; sourceTree = "<group>"; };
 		B3655F30189ABB1C0029A94C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3655F32189ABB1C0029A94C /* MariMediaAssignmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MariMediaAssignmentTests.m; sourceTree = "<group>"; };
+		B3655F3D189AC5020029A94C /* RegisterationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterationViewController.h; sourceTree = "<group>"; };
+		B3655F3E189AC5020029A94C /* RegisterationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterationViewController.m; sourceTree = "<group>"; };
+		B3655F40189AC5190029A94C /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
+		B3655F41189AC5190029A94C /* TasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
+		B3655F44189AC9A10029A94C /* TaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskCell.h; sourceTree = "<group>"; };
+		B3655F45189AC9A10029A94C /* TaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
+		B3655F49189AC9D80029A94C /* CategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryView.h; sourceTree = "<group>"; };
+		B3655F4A189AC9D80029A94C /* CategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryView.m; sourceTree = "<group>"; };
+		B3655F4D189ACA1F0029A94C /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
+		B3655F4E189ACA1F0029A94C /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
+		B3655F73189ACE3E0029A94C /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
+		B3655F81189ACF340029A94C /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
+		B3655F82189ACF340029A94C /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tasks.m; sourceTree = "<group>"; };
+		B3655F84189ACF350029A94C /* TasksCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksCategory.h; sourceTree = "<group>"; };
+		B3655F85189ACF350029A94C /* TasksCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksCategory.m; sourceTree = "<group>"; };
+		B3655F87189AD0120029A94C /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +134,13 @@
 		B3655F0D189ABB1C0029A94C /* MariMediaAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				B3655F50189ACA3B0029A94C /* DataBase */,
+				B3655F4C189ACA050029A94C /* Managers */,
+				B3655F43189AC9780029A94C /* Views */,
+				B3655F3C189ABF100029A94C /* ViewControllers */,
 				B3655F16189ABB1C0029A94C /* AppDelegate.h */,
 				B3655F17189ABB1C0029A94C /* AppDelegate.m */,
 				B3655F19189ABB1C0029A94C /* Main.storyboard */,
-				B3655F1C189ABB1C0029A94C /* ViewController.h */,
-				B3655F1D189ABB1C0029A94C /* ViewController.m */,
 				B3655F1F189ABB1C0029A94C /* Images.xcassets */,
 				B3655F0E189ABB1C0029A94C /* Supporting Files */,
 			);
@@ -150,6 +174,66 @@
 				B3655F2F189ABB1C0029A94C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3655F3C189ABF100029A94C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3655F3D189AC5020029A94C /* RegisterationViewController.h */,
+				B3655F3E189AC5020029A94C /* RegisterationViewController.m */,
+				B3655F40189AC5190029A94C /* TasksViewController.h */,
+				B3655F41189AC5190029A94C /* TasksViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B3655F43189AC9780029A94C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3655F48189AC9B80029A94C /* CategoryView */,
+				B3655F47189AC9AC0029A94C /* TaskCell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B3655F47189AC9AC0029A94C /* TaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				B3655F44189AC9A10029A94C /* TaskCell.h */,
+				B3655F45189AC9A10029A94C /* TaskCell.m */,
+			);
+			name = TaskCell;
+			sourceTree = "<group>";
+		};
+		B3655F48189AC9B80029A94C /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				B3655F49189AC9D80029A94C /* CategoryView.h */,
+				B3655F4A189AC9D80029A94C /* CategoryView.m */,
+				B3655F87189AD0120029A94C /* CategoryView.xib */,
+			);
+			name = CategoryView;
+			sourceTree = "<group>";
+		};
+		B3655F4C189ACA050029A94C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B3655F4D189ACA1F0029A94C /* DataBaseManager.h */,
+				B3655F4E189ACA1F0029A94C /* DataBaseManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		B3655F50189ACA3B0029A94C /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				B3655F72189ACE3E0029A94C /* TaskModel.xcdatamodeld */,
+				B3655F81189ACF340029A94C /* Tasks.h */,
+				B3655F82189ACF340029A94C /* Tasks.m */,
+				B3655F84189ACF350029A94C /* TasksCategory.h */,
+				B3655F85189ACF350029A94C /* TasksCategory.m */,
+			);
+			name = DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +314,7 @@
 			files = (
 				B3655F20189ABB1C0029A94C /* Images.xcassets in Resources */,
 				B3655F12189ABB1C0029A94C /* InfoPlist.strings in Resources */,
+				B3655F88189AD0120029A94C /* CategoryView.xib in Resources */,
 				B3655F1B189ABB1C0029A94C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,9 +334,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3655F1E189ABB1C0029A94C /* ViewController.m in Sources */,
+				B3655F86189ACF350029A94C /* TasksCategory.m in Sources */,
 				B3655F18189ABB1C0029A94C /* AppDelegate.m in Sources */,
+				B3655F42189AC5190029A94C /* TasksViewController.m in Sources */,
+				B3655F74189ACE3E0029A94C /* TaskModel.xcdatamodeld in Sources */,
+				B3655F46189AC9A10029A94C /* TaskCell.m in Sources */,
 				B3655F14189ABB1C0029A94C /* main.m in Sources */,
+				B3655F4F189ACA1F0029A94C /* DataBaseManager.m in Sources */,
+				B3655F4B189AC9D80029A94C /* CategoryView.m in Sources */,
+				B3655F83189ACF340029A94C /* Tasks.m in Sources */,
+				B3655F3F189AC5020029A94C /* RegisterationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +562,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B3655F72189ACE3E0029A94C /* TaskModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B3655F73189ACE3E0029A94C /* TaskModel.xcdatamodel */,
+			);
+			currentVersion = B3655F73189ACE3E0029A94C /* TaskModel.xcdatamodel */;
+			path = TaskModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B3655EFC189ABB1C0029A94C /* Project object */;
 }

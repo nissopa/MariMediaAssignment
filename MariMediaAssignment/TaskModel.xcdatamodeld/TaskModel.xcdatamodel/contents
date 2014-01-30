@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Tasks" representedClassName="Tasks" syncable="YES">
+        <attribute name="taskDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="taskDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskPriority" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="taskTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uniqueId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="taskCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TasksCategory" inverseName="tasks" inverseEntity="TasksCategory" syncable="YES"/>
+    </entity>
+    <entity name="TasksCategory" representedClassName="TasksCategory" syncable="YES">
+        <attribute name="categoryColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="taskCategory" inverseEntity="Tasks" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Tasks" positionX="160" positionY="192" width="128" height="133"/>
+        <element name="TasksCategory" positionX="-126" positionY="171" width="128" height="88"/>
+    </elements>
+</model>

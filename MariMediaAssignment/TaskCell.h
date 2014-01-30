@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TaskCell.h
 //  MariMediaAssignment
 //
 //  Created by Nissim Pardo on 1/30/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TaskCell : UITableViewCell
 
 @end
