@@ -29,6 +29,9 @@
 		B3655F83189ACF340029A94C /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F82189ACF340029A94C /* Tasks.m */; };
 		B3655F86189ACF350029A94C /* TasksCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F85189ACF350029A94C /* TasksCategory.m */; };
 		B3655F88189AD0120029A94C /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3655F87189AD0120029A94C /* CategoryView.xib */; };
+		B3655F90189AD4AB0029A94C /* NSDate+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F8B189AD4AB0029A94C /* NSDate+Calculation.m */; };
+		B3655F91189AD4AB0029A94C /* NSString+Dates.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F8D189AD4AB0029A94C /* NSString+Dates.m */; };
+		B3655F92189AD4AB0029A94C /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F8F189AD4AB0029A94C /* UIColor+RGB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,12 @@
 		B3655F84189ACF350029A94C /* TasksCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksCategory.h; sourceTree = "<group>"; };
 		B3655F85189ACF350029A94C /* TasksCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksCategory.m; sourceTree = "<group>"; };
 		B3655F87189AD0120029A94C /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
+		B3655F8A189AD4AB0029A94C /* NSDate+Calculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calculation.h"; sourceTree = "<group>"; };
+		B3655F8B189AD4AB0029A94C /* NSDate+Calculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calculation.m"; sourceTree = "<group>"; };
+		B3655F8C189AD4AB0029A94C /* NSString+Dates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Dates.h"; sourceTree = "<group>"; };
+		B3655F8D189AD4AB0029A94C /* NSString+Dates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Dates.m"; sourceTree = "<group>"; };
+		B3655F8E189AD4AB0029A94C /* UIColor+RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGB.h"; sourceTree = "<group>"; };
+		B3655F8F189AD4AB0029A94C /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +143,7 @@
 		B3655F0D189ABB1C0029A94C /* MariMediaAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				B3655F89189AD4A00029A94C /* Utilities */,
 				B3655F50189ACA3B0029A94C /* DataBase */,
 				B3655F4C189ACA050029A94C /* Managers */,
 				B3655F43189AC9780029A94C /* Views */,
@@ -234,6 +244,19 @@
 				B3655F85189ACF350029A94C /* TasksCategory.m */,
 			);
 			name = DataBase;
+			sourceTree = "<group>";
+		};
+		B3655F89189AD4A00029A94C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B3655F8A189AD4AB0029A94C /* NSDate+Calculation.h */,
+				B3655F8B189AD4AB0029A94C /* NSDate+Calculation.m */,
+				B3655F8C189AD4AB0029A94C /* NSString+Dates.h */,
+				B3655F8D189AD4AB0029A94C /* NSString+Dates.m */,
+				B3655F8E189AD4AB0029A94C /* UIColor+RGB.h */,
+				B3655F8F189AD4AB0029A94C /* UIColor+RGB.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,12 +360,15 @@
 				B3655F86189ACF350029A94C /* TasksCategory.m in Sources */,
 				B3655F18189ABB1C0029A94C /* AppDelegate.m in Sources */,
 				B3655F42189AC5190029A94C /* TasksViewController.m in Sources */,
+				B3655F91189AD4AB0029A94C /* NSString+Dates.m in Sources */,
 				B3655F74189ACE3E0029A94C /* TaskModel.xcdatamodeld in Sources */,
 				B3655F46189AC9A10029A94C /* TaskCell.m in Sources */,
 				B3655F14189ABB1C0029A94C /* main.m in Sources */,
 				B3655F4F189ACA1F0029A94C /* DataBaseManager.m in Sources */,
+				B3655F92189AD4AB0029A94C /* UIColor+RGB.m in Sources */,
 				B3655F4B189AC9D80029A94C /* CategoryView.m in Sources */,
 				B3655F83189ACF340029A94C /* Tasks.m in Sources */,
+				B3655F90189AD4AB0029A94C /* NSDate+Calculation.m in Sources */,
 				B3655F3F189AC5020029A94C /* RegisterationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

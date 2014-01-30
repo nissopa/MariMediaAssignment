@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tasks.h"
 
-@interface TaskCell : UITableViewCell
+@interface TaskCell : UITableViewCell {
+    __weak IBOutlet UILabel *taskTitleLabel;
+    __weak IBOutlet UILabel *taskDescriptionLabel;
+    __weak IBOutlet UILabel *taskDateLabel;
+    __weak IBOutlet UILabel *categoryLabel;
+}
 
+
+- (void)loadTaskCell:(Tasks *)task;
 @end

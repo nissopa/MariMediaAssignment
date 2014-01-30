@@ -7,25 +7,20 @@
 //
 
 #import "CategoryView.h"
+#import "NSString+Dates.h"
 
 @implementation CategoryView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+- (id)initWithCategory:(TasksCategory *)category {
+    self = [[NSBundle mainBundle] loadNibNamed:@"CategoryView"
+                                         owner:self
+                                       options:nil][0];
     if (self) {
-        // Initialization code
+        categoryNameLabel.text = category.categoryName;
+        self.backgroundColor = [category.categoryColor stringRGB];
+        return self;
     }
-    return self;
+    return nil;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

@@ -7,23 +7,18 @@
 //
 
 #import "TaskCell.h"
+#import "NSDate+Calculation.h"
+#import "TasksCategory.h"
+#import "NSString+Dates.h"
 
 @implementation TaskCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)loadTaskCell:(Tasks *)task {
+    taskTitleLabel.text = task.taskTitle;
+    taskDescriptionLabel.text = task.taskDescription;
+    taskDateLabel.text = [task.taskDate inString];
+    categoryLabel.backgroundColor = [task.taskCategory.categoryColor stringRGB];
+    categoryLabel.text = task.taskCategory.categoryName;
 }
 
 @end

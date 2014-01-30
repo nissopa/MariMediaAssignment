@@ -19,6 +19,7 @@ static NSString *TaskDateKey = @"TaskDateKey";
 + (DataBaseManager *)instance;
 
 - (void)addTask:(NSDictionary *)taskParams;
+- (void)addCategory:(NSDictionary *)categoryParams;
 - (void)removeTaskById:(NSString *)uniqueId;
 - (NSDictionary *)sortBy:(NSString *)descriptor;
 - (NSDictionary *)predicate:(NSString *)predicate;

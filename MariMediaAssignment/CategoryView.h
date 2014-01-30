@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TasksCategory.h"
 
-typedef enum CategoryColor {
-    CategoryColorRed,
-    CategoryColorYellow,
-    CategoryColorBlue,
-    CategoryColorOrange
-}CategoryColor;
-
-@interface CategoryView : UIView
-
+@interface CategoryView : UIView {
+    UIColor *categoryColor;
+    __weak IBOutlet UILabel *categoryNameLabel;
+}
+- (id)initWithCategory:(TasksCategory *)category;
 @end
