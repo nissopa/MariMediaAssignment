@@ -32,6 +32,10 @@
 		B3655F90189AD4AB0029A94C /* NSDate+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F8B189AD4AB0029A94C /* NSDate+Calculation.m */; };
 		B3655F91189AD4AB0029A94C /* NSString+Dates.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F8D189AD4AB0029A94C /* NSString+Dates.m */; };
 		B3655F92189AD4AB0029A94C /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F8F189AD4AB0029A94C /* UIColor+RGB.m */; };
+		B3655F94189ADEFF0029A94C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F93189ADEFF0029A94C /* CoreData.framework */; };
+		B3655F97189AE0730029A94C /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F96189AE0730029A94C /* AddTaskViewController.m */; };
+		B3655F99189AE1C40029A94C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F98189AE1C40029A94C /* QuartzCore.framework */; };
+		B3655F9C189AE2940029A94C /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F9B189AE2940029A94C /* UIView+Position.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,12 @@
 		B3655F8D189AD4AB0029A94C /* NSString+Dates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Dates.m"; sourceTree = "<group>"; };
 		B3655F8E189AD4AB0029A94C /* UIColor+RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGB.h"; sourceTree = "<group>"; };
 		B3655F8F189AD4AB0029A94C /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
+		B3655F93189ADEFF0029A94C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B3655F95189AE0730029A94C /* AddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
+		B3655F96189AE0730029A94C /* AddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
+		B3655F98189AE1C40029A94C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B3655F9A189AE2940029A94C /* UIView+Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Position.h"; sourceTree = "<group>"; };
+		B3655F9B189AE2940029A94C /* UIView+Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Position.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3655F99189AE1C40029A94C /* QuartzCore.framework in Frameworks */,
+				B3655F94189ADEFF0029A94C /* CoreData.framework in Frameworks */,
 				B3655F0A189ABB1C0029A94C /* CoreGraphics.framework in Frameworks */,
 				B3655F0C189ABB1C0029A94C /* UIKit.framework in Frameworks */,
 				B3655F08189ABB1C0029A94C /* Foundation.framework in Frameworks */,
@@ -132,6 +144,8 @@
 		B3655F06189ABB1C0029A94C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3655F98189AE1C40029A94C /* QuartzCore.framework */,
+				B3655F93189ADEFF0029A94C /* CoreData.framework */,
 				B3655F07189ABB1C0029A94C /* Foundation.framework */,
 				B3655F09189ABB1C0029A94C /* CoreGraphics.framework */,
 				B3655F0B189ABB1C0029A94C /* UIKit.framework */,
@@ -193,6 +207,8 @@
 				B3655F3E189AC5020029A94C /* RegisterationViewController.m */,
 				B3655F40189AC5190029A94C /* TasksViewController.h */,
 				B3655F41189AC5190029A94C /* TasksViewController.m */,
+				B3655F95189AE0730029A94C /* AddTaskViewController.h */,
+				B3655F96189AE0730029A94C /* AddTaskViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -255,6 +271,8 @@
 				B3655F8D189AD4AB0029A94C /* NSString+Dates.m */,
 				B3655F8E189AD4AB0029A94C /* UIColor+RGB.h */,
 				B3655F8F189AD4AB0029A94C /* UIColor+RGB.m */,
+				B3655F9A189AE2940029A94C /* UIView+Position.h */,
+				B3655F9B189AE2940029A94C /* UIView+Position.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -360,10 +378,12 @@
 				B3655F86189ACF350029A94C /* TasksCategory.m in Sources */,
 				B3655F18189ABB1C0029A94C /* AppDelegate.m in Sources */,
 				B3655F42189AC5190029A94C /* TasksViewController.m in Sources */,
+				B3655F9C189AE2940029A94C /* UIView+Position.m in Sources */,
 				B3655F91189AD4AB0029A94C /* NSString+Dates.m in Sources */,
 				B3655F74189ACE3E0029A94C /* TaskModel.xcdatamodeld in Sources */,
 				B3655F46189AC9A10029A94C /* TaskCell.m in Sources */,
 				B3655F14189ABB1C0029A94C /* main.m in Sources */,
+				B3655F97189AE0730029A94C /* AddTaskViewController.m in Sources */,
 				B3655F4F189ACA1F0029A94C /* DataBaseManager.m in Sources */,
 				B3655F92189AD4AB0029A94C /* UIColor+RGB.m in Sources */,
 				B3655F4B189AC9D80029A94C /* CategoryView.m in Sources */,

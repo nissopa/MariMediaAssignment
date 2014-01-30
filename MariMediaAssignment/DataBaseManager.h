@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Tasks.h"
+#import "TasksCategory.h"
+#import <CoreData/CoreData.h>
 
 static NSString *TaskTitleKey = @"TaskTitleKey";
 static NSString *TaskDescriptionKey = @"TaskDescriptionKey";
@@ -23,4 +26,7 @@ static NSString *TaskDateKey = @"TaskDateKey";
 - (void)removeTaskById:(NSString *)uniqueId;
 - (NSDictionary *)sortBy:(NSString *)descriptor;
 - (NSDictionary *)predicate:(NSString *)predicate;
+
+- (TasksCategory *)categoryByName:(NSString *)categoryName;
+
 @end
