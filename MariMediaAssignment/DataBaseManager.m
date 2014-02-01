@@ -100,35 +100,30 @@
 - (void)removeTaskById:(NSString *)uniqueId {
     
 }
-- (NSDictionary *)sortBy:(NSString *)descriptor {
-    NSMutableDictionary *dict = [NSMutableDictionary new];
+- (NSDictionary *)sortBy:(id)descriptor {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Tasks"];
     NSError *error = nil;
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"taskCategory.categoryName" ascending:YES],
-                                [NSSortDescriptor sortDescriptorWithKey:@"taskTitle" ascending:YES]];
+                                [NSSortDescriptor sortDescriptorWithKey:descriptor ascending:YES]];
     NSArray *matches = [_context executeFetchRequest:request
                                                error:&error];
-    for (Tasks *task in matches) {
-        if ([dict.allKeys containsObject:task.taskCategory.categoryName]) {
-            [dict[task.taskCategory.categoryName] addObject:task];
-        } else {
-            NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:task, nil];
-            dict[task.taskCategory.categoryName] = array;
-        }
-    }
-    
-    return nil;
+    return [self arrangeInDictionary:matches];
 }
 
-- (NSDictionary *)tasksByCategory {
+
+//- (NSDictionary *)tasksByCategory {
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Tasks"];
+//    NSError *error = nil;
+//    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"taskCategory.categoryName" ascending:YES],
+//                                [NSSortDescriptor sortDescriptorWithKey:@"taskTitle" ascending:YES]];
+//    NSArray *matches = [_context executeFetchRequest:request
+//                                               error:&error];
+//    return [self arrangeInDictionary:matches];
+//}
+
+- (NSDictionary *)arrangeInDictionary:(NSArray *)sortedTasks {
     NSMutableDictionary *dict = [NSMutableDictionary new];
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Tasks"];
-    NSError *error = nil;
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"taskCategory.categoryName" ascending:YES],
-                                [NSSortDescriptor sortDescriptorWithKey:@"taskTitle" ascending:YES]];
-    NSArray *matches = [_context executeFetchRequest:request
-                                               error:&error];
-    for (Tasks *task in matches) {
+    for (Tasks *task in sortedTasks) {
         if ([dict.allKeys containsObject:task.taskCategory.categoryName]) {
             [dict[task.taskCategory.categoryName] addObject:task];
         } else {

@@ -26,6 +26,9 @@ static NSString *TaskCategoryKey = @"TaskCategoryKey";
 static NSString *TaskCategoryColor = @"TaskCategoryColor";
 static NSString *TaskDoneKey = @"TaskDoneKey";
 
+static NSString *DateDescriptor = @"taskDate";
+static NSString *TitleDescriptor = @"taskTitle";
+
 #define BlueColor @"0,0,255"
 #define YellowColor @"255,204,102"
 #define PinkColor @"255,0,128"
@@ -48,9 +51,8 @@ typedef void (^DBInitBlock) (NSManagedObjectContext *context);
 - (void)addTask:(NSDictionary *)taskParams;
 - (TasksCategory *)addCategory:(NSDictionary *)categoryParams;
 - (void)removeTaskById:(NSString *)uniqueId;
-- (NSDictionary *)sortBy:(NSString *)descriptor;
+- (NSDictionary *)sortBy:(id)descriptor;
 - (NSDictionary *)predicate:(NSString *)predicate;
-- (NSDictionary *)tasksByCategory;
 - (TasksCategory *)categoryByName:(NSString *)categoryName;
 - (NSArray *)categoriesListForPicker;
 

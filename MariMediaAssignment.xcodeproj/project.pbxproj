@@ -37,6 +37,7 @@
 		B3655F9C189AE2940029A94C /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F9B189AE2940029A94C /* UIView+Position.m */; };
 		B3655F9F189CECD40029A94C /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F9E189CECD30029A94C /* Tasks.m */; };
 		B37758FC189D1D39009C72EF /* CellImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37758FB189D1D39009C72EF /* CellImages.xcassets */; };
+		B38F974D189DA009008A00E2 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38F974C189DA009008A00E2 /* DetailedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		B3655F9D189CECD30029A94C /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
 		B3655F9E189CECD30029A94C /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tasks.m; sourceTree = "<group>"; };
 		B37758FB189D1D39009C72EF /* CellImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CellImages.xcassets; sourceTree = "<group>"; };
+		B38F974B189DA009008A00E2 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		B38F974C189DA009008A00E2 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 				B3655F41189AC5190029A94C /* TasksViewController.m */,
 				B3655F95189AE0730029A94C /* AddTaskViewController.h */,
 				B3655F96189AE0730029A94C /* AddTaskViewController.m */,
+				B38F974B189DA009008A00E2 /* DetailedViewController.h */,
+				B38F974C189DA009008A00E2 /* DetailedViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				B3655F92189AD4AB0029A94C /* UIColor+RGB.m in Sources */,
 				B3655F4B189AC9D80029A94C /* CategoryView.m in Sources */,
 				B3655F90189AD4AB0029A94C /* NSDate+Calculation.m in Sources */,
+				B38F974D189DA009008A00E2 /* DetailedViewController.m in Sources */,
 				B3655F3F189AC5020029A94C /* RegisterationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

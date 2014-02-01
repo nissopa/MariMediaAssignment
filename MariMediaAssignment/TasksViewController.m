@@ -11,6 +11,7 @@
 #import "CategoryView.h"
 #import "DataBaseManager.h"
 #import "AddTaskViewController.h"
+#import "DetailedViewController.h"
 
 @interface TasksViewController () <UITableViewDataSource, UITableViewDelegate, AddTaskViewControllerDelegate, TaskCellDelegate>{
     __weak IBOutlet UITableView *tasksTV;
@@ -35,11 +36,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self loadTable];
+    [self loadTable:TitleDescriptor];
 }
 
-- (void)loadTable {
-    tasksDict = [[DataBaseManager instance] tasksByCategory];
+- (void)loadTable:(NSString *)descriptor {
+    tasksDict = [[DataBaseManager instance] sortBy:descriptor];
     sortedKeys = [tasksDict.allKeys sortedArrayUsingSelector:@selector(compare:)];
     [tasksTV reloadData];
 }
@@ -51,6 +52,8 @@
 }
 
 - (IBAction)sortChanged:(UISegmentedControl *)sender {
+    NSString *descriptor = sender.selectedSegmentIndex ? TitleDescriptor : DateDescriptor;
+    [self loadTable:descriptor];
 }
 
 
@@ -60,6 +63,10 @@
     addVC.view.frame = self.view.bounds;
     [self addChildViewController:addVC];
     [self.view addSubview:addVC.view];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [segue.destinationViewController setTask:sender];
 }
 
 
@@ -89,10 +96,14 @@
     return categoryView;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"Detailed" sender:tasksDict[sortedKeys[indexPath.section]][indexPath.row]];
+}
+
 #pragma mark AddTaskViewControllerDelegate methods 
 - (void)addTask:(AddTaskViewController *)taskVC addTaskParams:(NSDictionary *)taskParams {
     [[DataBaseManager instance] addTask:taskParams];
-    [self loadTable];
+    [self loadTable:TitleDescriptor];
 }
 
 #pragma mark TaskCellDelegate methods
