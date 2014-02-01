@@ -12,7 +12,7 @@
 #import "DataBaseManager.h"
 #import "AddTaskViewController.h"
 
-@interface TasksViewController () <UITableViewDataSource, UITableViewDelegate, AddTaskViewControllerDelegate>{
+@interface TasksViewController () <UITableViewDataSource, UITableViewDelegate, AddTaskViewControllerDelegate, TaskCellDelegate>{
     __weak IBOutlet UITableView *tasksTV;
     NSDictionary *tasksDict;
     NSArray *sortedKeys;
@@ -35,6 +35,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self loadTable];
+}
+
+- (void)loadTable {
+    tasksDict = [[DataBaseManager instance] tasksByCategory];
+    sortedKeys = [tasksDict.allKeys sortedArrayUsingSelector:@selector(compare:)];
+    [tasksTV reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,6 +56,7 @@
 
 - (IBAction)addTask:(UIButton *)sender {
     AddTaskViewController *addVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AddTaskViewController"];
+    addVC.delegate = self;
     addVC.view.frame = self.view.bounds;
     [self addChildViewController:addVC];
     [self.view addSubview:addVC.view];
@@ -72,6 +80,7 @@
                                reuseIdentifier:Identifier];
     }
     [cell loadTaskCell:tasksDict[sortedKeys[indexPath.section]][indexPath.row]];
+    cell.delegate = self;
     return cell;
 }
 
@@ -83,6 +92,11 @@
 #pragma mark AddTaskViewControllerDelegate methods 
 - (void)addTask:(AddTaskViewController *)taskVC addTaskParams:(NSDictionary *)taskParams {
     [[DataBaseManager instance] addTask:taskParams];
-    [tasksTV reloadData];
+    [self loadTable];
+}
+
+#pragma mark TaskCellDelegate methods
+- (void)taskCell:(TaskCell *)taskCell didSelected:(Tasks *)task {
+    task.isDone = @(YES);
 }
 @end

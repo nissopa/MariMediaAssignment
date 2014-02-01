@@ -26,7 +26,6 @@
 		B3655F4B189AC9D80029A94C /* CategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F4A189AC9D80029A94C /* CategoryView.m */; };
 		B3655F4F189ACA1F0029A94C /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F4E189ACA1F0029A94C /* DataBaseManager.m */; };
 		B3655F74189ACE3E0029A94C /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3655F72189ACE3E0029A94C /* TaskModel.xcdatamodeld */; };
-		B3655F83189ACF340029A94C /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F82189ACF340029A94C /* Tasks.m */; };
 		B3655F86189ACF350029A94C /* TasksCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F85189ACF350029A94C /* TasksCategory.m */; };
 		B3655F88189AD0120029A94C /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3655F87189AD0120029A94C /* CategoryView.xib */; };
 		B3655F90189AD4AB0029A94C /* NSDate+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F8B189AD4AB0029A94C /* NSDate+Calculation.m */; };
@@ -36,6 +35,8 @@
 		B3655F97189AE0730029A94C /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F96189AE0730029A94C /* AddTaskViewController.m */; };
 		B3655F99189AE1C40029A94C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F98189AE1C40029A94C /* QuartzCore.framework */; };
 		B3655F9C189AE2940029A94C /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F9B189AE2940029A94C /* UIView+Position.m */; };
+		B3655F9F189CECD40029A94C /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = B3655F9E189CECD30029A94C /* Tasks.m */; };
+		B37758FC189D1D39009C72EF /* CellImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37758FB189D1D39009C72EF /* CellImages.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +78,6 @@
 		B3655F4D189ACA1F0029A94C /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
 		B3655F4E189ACA1F0029A94C /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
 		B3655F73189ACE3E0029A94C /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
-		B3655F81189ACF340029A94C /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
-		B3655F82189ACF340029A94C /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tasks.m; sourceTree = "<group>"; };
 		B3655F84189ACF350029A94C /* TasksCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksCategory.h; sourceTree = "<group>"; };
 		B3655F85189ACF350029A94C /* TasksCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksCategory.m; sourceTree = "<group>"; };
 		B3655F87189AD0120029A94C /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
@@ -94,6 +93,9 @@
 		B3655F98189AE1C40029A94C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B3655F9A189AE2940029A94C /* UIView+Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Position.h"; sourceTree = "<group>"; };
 		B3655F9B189AE2940029A94C /* UIView+Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Position.m"; sourceTree = "<group>"; };
+		B3655F9D189CECD30029A94C /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
+		B3655F9E189CECD30029A94C /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tasks.m; sourceTree = "<group>"; };
+		B37758FB189D1D39009C72EF /* CellImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CellImages.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				B3655F19189ABB1C0029A94C /* Main.storyboard */,
 				B3655F1F189ABB1C0029A94C /* Images.xcassets */,
 				B3655F0E189ABB1C0029A94C /* Supporting Files */,
+				B37758FB189D1D39009C72EF /* CellImages.xcassets */,
 			);
 			path = MariMediaAssignment;
 			sourceTree = "<group>";
@@ -253,9 +256,9 @@
 		B3655F50189ACA3B0029A94C /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				B3655F9D189CECD30029A94C /* Tasks.h */,
+				B3655F9E189CECD30029A94C /* Tasks.m */,
 				B3655F72189ACE3E0029A94C /* TaskModel.xcdatamodeld */,
-				B3655F81189ACF340029A94C /* Tasks.h */,
-				B3655F82189ACF340029A94C /* Tasks.m */,
 				B3655F84189ACF350029A94C /* TasksCategory.h */,
 				B3655F85189ACF350029A94C /* TasksCategory.m */,
 			);
@@ -353,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37758FC189D1D39009C72EF /* CellImages.xcassets in Resources */,
 				B3655F20189ABB1C0029A94C /* Images.xcassets in Resources */,
 				B3655F12189ABB1C0029A94C /* InfoPlist.strings in Resources */,
 				B3655F88189AD0120029A94C /* CategoryView.xib in Resources */,
@@ -378,6 +382,7 @@
 				B3655F86189ACF350029A94C /* TasksCategory.m in Sources */,
 				B3655F18189ABB1C0029A94C /* AppDelegate.m in Sources */,
 				B3655F42189AC5190029A94C /* TasksViewController.m in Sources */,
+				B3655F9F189CECD40029A94C /* Tasks.m in Sources */,
 				B3655F9C189AE2940029A94C /* UIView+Position.m in Sources */,
 				B3655F91189AD4AB0029A94C /* NSString+Dates.m in Sources */,
 				B3655F74189ACE3E0029A94C /* TaskModel.xcdatamodeld in Sources */,
@@ -387,7 +392,6 @@
 				B3655F4F189ACA1F0029A94C /* DataBaseManager.m in Sources */,
 				B3655F92189AD4AB0029A94C /* UIColor+RGB.m in Sources */,
 				B3655F4B189AC9D80029A94C /* CategoryView.m in Sources */,
-				B3655F83189ACF340029A94C /* Tasks.m in Sources */,
 				B3655F90189AD4AB0029A94C /* NSDate+Calculation.m in Sources */,
 				B3655F3F189AC5020029A94C /* RegisterationViewController.m in Sources */,
 			);
@@ -598,6 +602,7 @@
 				B3655F38189ABB1C0029A94C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3655F39189ABB1C0029A94C /* Build configuration list for PBXNativeTarget "MariMediaAssignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +611,7 @@
 				B3655F3B189ABB1C0029A94C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,7 +7,7 @@
 //
 
 #import "NSString+Dates.h"
-#import "NSDate+Calculation.h"
+#import "UIColor+RGB.h"
 
 @implementation NSString (Dates)
 
@@ -66,6 +66,17 @@
         time = [params[1] substringToIndex:5];
         date = [params[0] substringFromIndex:5];
         return @[date, time];
+    }
+    return nil;
+}
+
+- (UIColor *)stringRGB {
+    NSArray *colorParams = [self componentsSeparatedByString:@","];
+    if (colorParams.count > 2) {
+        float R = [colorParams[0] floatValue];
+        float G = [colorParams[1] floatValue];
+        float B = [colorParams[2] floatValue];
+        return [UIColor RGB:R G:G B:B];
     }
     return nil;
 }

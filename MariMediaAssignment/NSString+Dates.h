@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSDate+Calculation.h"
 
 @interface NSString (Dates)
 

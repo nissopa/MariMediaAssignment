@@ -10,4 +10,5 @@
 
 @interface UIColor (RGB)
 + (UIColor *)RGB:(float)R G:(float)G B:(float)B;
+
 @end

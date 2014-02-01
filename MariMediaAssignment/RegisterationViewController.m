@@ -7,8 +7,11 @@
 //
 
 #import "RegisterationViewController.h"
+#import "DataBaseManager.h"
 
-@interface RegisterationViewController ()
+@interface RegisterationViewController () {
+    __weak IBOutlet UIButton *start;
+}
 
 @end
 
@@ -27,6 +30,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [[DataBaseManager instance] initializeDB:^(NSManagedObjectContext *context) {
+        if (context) {
+            start.hidden = NO;
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning

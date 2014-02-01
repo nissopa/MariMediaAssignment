@@ -8,14 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "Tasks.h"
+@class TaskCell;
+@protocol TaskCellDelegate <NSObject>
+
+- (void)taskCell:(TaskCell *)taskCell didSelected:(Tasks *)task;
+
+@end
 
 @interface TaskCell : UITableViewCell {
     __weak IBOutlet UILabel *taskTitleLabel;
-    __weak IBOutlet UILabel *taskDescriptionLabel;
     __weak IBOutlet UILabel *taskDateLabel;
-    __weak IBOutlet UILabel *categoryLabel;
+    __weak IBOutlet UIButton *doneButton;
+    Tasks *currentTask;
 }
 
+@property (nonatomic, weak) id<TaskCellDelegate> delegate;
 
 - (void)loadTaskCell:(Tasks *)task;
+- (IBAction)taskSelected:(UIButton *)sender;
 @end

@@ -2,7 +2,7 @@
 //  Tasks.m
 //  MariMediaAssignment
 //
-//  Created by Nissim Pardo on 1/30/14.
+//  Created by Nissim Pardo on 2/1/14.
 //  Copyright (c) 2014 Nissim Pardo. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @dynamic taskDescription;
 @dynamic taskDate;
 @dynamic taskPriority;
+@dynamic isDone;
 @dynamic taskCategory;
 
 @end

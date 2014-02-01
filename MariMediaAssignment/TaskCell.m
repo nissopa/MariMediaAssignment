@@ -14,11 +14,14 @@
 @implementation TaskCell
 
 - (void)loadTaskCell:(Tasks *)task {
+    currentTask = task;
     taskTitleLabel.text = task.taskTitle;
-    taskDescriptionLabel.text = task.taskDescription;
     taskDateLabel.text = [task.taskDate inString];
-    categoryLabel.backgroundColor = [task.taskCategory.categoryColor stringRGB];
-    categoryLabel.text = task.taskCategory.categoryName;
+    doneButton.selected = task.isDone.boolValue;
 }
 
+- (IBAction)taskSelected:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    [_delegate taskCell:self didSelected:currentTask];
+}
 @end
