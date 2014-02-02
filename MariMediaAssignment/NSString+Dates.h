@@ -34,4 +34,7 @@
 
 // Gets RGB string and transform into UIColor
 - (UIColor *)stringRGB;
+
+// Checks valid email address
+- (BOOL)isEmailValid;
 @end

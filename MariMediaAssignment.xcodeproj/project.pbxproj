@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F9CAB73189E5EE800E56D3C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CAB72189E5EE800E56D3C /* Settings.m */; };
 		B3655F08189ABB1C0029A94C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F07189ABB1C0029A94C /* Foundation.framework */; };
 		B3655F0A189ABB1C0029A94C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F09189ABB1C0029A94C /* CoreGraphics.framework */; };
 		B3655F0C189ABB1C0029A94C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3655F0B189ABB1C0029A94C /* UIKit.framework */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F9CAB71189E5EE800E56D3C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		5F9CAB72189E5EE800E56D3C /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		B3655F04189ABB1C0029A94C /* MariMediaAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariMediaAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3655F07189ABB1C0029A94C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B3655F09189ABB1C0029A94C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -264,6 +267,8 @@
 				B3655F9D189CECD30029A94C /* Tasks.h */,
 				B3655F9E189CECD30029A94C /* Tasks.m */,
 				B3655F72189ACE3E0029A94C /* TaskModel.xcdatamodeld */,
+				5F9CAB71189E5EE800E56D3C /* Settings.h */,
+				5F9CAB72189E5EE800E56D3C /* Settings.m */,
 				B3655F84189ACF350029A94C /* TasksCategory.h */,
 				B3655F85189ACF350029A94C /* TasksCategory.m */,
 			);
@@ -386,6 +391,7 @@
 			files = (
 				B3655F86189ACF350029A94C /* TasksCategory.m in Sources */,
 				B3655F18189ABB1C0029A94C /* AppDelegate.m in Sources */,
+				5F9CAB73189E5EE800E56D3C /* Settings.m in Sources */,
 				B3655F42189AC5190029A94C /* TasksViewController.m in Sources */,
 				B3655F9F189CECD40029A94C /* Tasks.m in Sources */,
 				B3655F9C189AE2940029A94C /* UIView+Position.m in Sources */,

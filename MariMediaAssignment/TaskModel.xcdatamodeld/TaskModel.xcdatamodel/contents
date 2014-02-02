@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Settings" representedClassName="Settings" syncable="YES">
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rememberMe" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Tasks" representedClassName="Tasks" syncable="YES">
         <attribute name="isDone" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="taskDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -15,7 +20,8 @@
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="taskCategory" inverseEntity="Tasks" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Tasks" positionX="160" positionY="192" width="128" height="148"/>
-        <element name="TasksCategory" positionX="-126" positionY="171" width="128" height="88"/>
+        <element name="Tasks" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TasksCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Settings" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

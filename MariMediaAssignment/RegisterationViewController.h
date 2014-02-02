@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataBaseManager.h"
 
-@interface RegisterationViewController : UIViewController
+@interface RegisterationViewController : UIViewController {
+    __weak IBOutlet UIButton *loginButton;
+    __weak IBOutlet UIButton *signInButton;
+}
 
 @end

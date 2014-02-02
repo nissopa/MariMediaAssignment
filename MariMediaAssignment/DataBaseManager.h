@@ -48,6 +48,11 @@ typedef void (^DBInitBlock) (NSManagedObjectContext *context);
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @property (nonatomic, strong) NSArray *categoryColors;
 
+
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *password;
+@property (nonatomic, assign) BOOL remeberMe;
+
 - (void)addTask:(NSDictionary *)taskParams;
 - (TasksCategory *)addCategory:(NSDictionary *)categoryParams;
 - (void)removeTaskById:(NSString *)uniqueId;

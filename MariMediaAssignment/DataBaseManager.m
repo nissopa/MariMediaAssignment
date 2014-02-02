@@ -9,8 +9,15 @@
 #import "DataBaseManager.h"
 #import "NSString+Dates.h"
 
+static NSString *UserNameKey = @"UserNameKey";
+static NSString *PasswordKey = @"PasswordKey";
+static NSString *RemeberMeKey = @"RemeberMeKey";
+
 @implementation DataBaseManager
 @synthesize categoryColors = _categoryColors;
+@synthesize userName = _userName;
+@synthesize password = _password;
+@synthesize remeberMe = _remeberMe;
 
 + (DataBaseManager *)instance {
     static DataBaseManager *instance = nil;
@@ -154,4 +161,41 @@
     }
     return nil;
 }
+
+- (NSString *)userName {
+    if (!_userName) {
+        _userName = [[NSUserDefaults standardUserDefaults] objectForKey:UserNameKey];
+    }
+    return _userName;
+}
+
+- (void)setUserName:(NSString *)userName {
+    _userName = userName;
+    [[NSUserDefaults standardUserDefaults] setObject:userName forKey:UserNameKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSString *)password {
+    if (!_password) {
+        _password = [[NSUserDefaults standardUserDefaults] objectForKey:PasswordKey];
+    }
+    return _password;
+}
+
+- (void)setPassword:(NSString *)password {
+    _password = password;
+    [[NSUserDefaults standardUserDefaults] setObject:password forKey:PasswordKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (BOOL)remeberMe {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:RemeberMeKey];
+}
+
+- (void)setRemeberMe:(BOOL)remeberMe {
+    _remeberMe = remeberMe;
+    [[NSUserDefaults standardUserDefaults] setBool:remeberMe forKey:RemeberMeKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 @end
