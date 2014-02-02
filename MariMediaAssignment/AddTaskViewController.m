@@ -43,6 +43,8 @@
     return self;
 }
 
+
+// Animating the views into the screen
 - (IBAction)addTask:(UIButton *)sender {
     if ([self isTaskValid]) {
         [UIView animateWithDuration:0.25 delay:0
@@ -64,6 +66,8 @@
     }
 }
 
+
+// Changing the color of the category (and update the data base)
 - (IBAction)categoryColorPressed:(UIButton *)sender {
     isCategoryColorSelected = YES;
     taskParams[TaskCategoryColor] = [DataBaseManager instance].categoryColors[sender.tag];
@@ -71,10 +75,13 @@
     categoryTF.textColor = [UIColor whiteColor];
 }
 
+// Updating the date by picker change
 - (IBAction)datePickerChanged:(UIDatePicker *)sender {
     dateTF.text = [sender.date inString];
 }
 
+
+// If the user wants to add his own category
 - (IBAction)addCategory:(UIButton *)sender {
     categoryTF.text = @"";
     categoryTF.inputView = nil;
@@ -83,6 +90,8 @@
     accessoryView.hidden = YES;
 }
 
+
+// Checks that all the values are valid for creating a new task
 - (BOOL)isTaskValid {
     BOOL valid = YES;
     for (UITextField *tf in taskContainer.subviews) {
@@ -113,6 +122,8 @@
     taskContainer.layer.shadowOpacity = 0.5;
     taskParams = [NSMutableDictionary new];
     dateTF.inputView = datePicker;
+    
+    // Gets all the categories which already created by the user
     categoryList = [[DataBaseManager instance] categoriesListForPicker];
 }
 
@@ -157,6 +168,8 @@
     return YES;
 }
 
+
+// Created pickerview for the categories which already created by the user
 #pragma mark UIPickerViewDelegate methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;

@@ -36,9 +36,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Loading the stored data to the table
     [self loadTable:TitleDescriptor];
 }
 
+
+// Gets the data from coredata and sorting the sections by ABC
 - (void)loadTable:(NSString *)descriptor {
     tasksDict = [[DataBaseManager instance] sortBy:descriptor];
     sortedKeys = [tasksDict.allKeys sortedArrayUsingSelector:@selector(compare:)];
@@ -51,12 +55,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+// Updating the table when clicking on the sort button (Date or ABC)
 - (IBAction)sortChanged:(UISegmentedControl *)sender {
     NSString *descriptor = sender.selectedSegmentIndex ? TitleDescriptor : DateDescriptor;
     [self loadTable:descriptor];
 }
 
 
+// Calling the assTaskController
 - (IBAction)addTask:(UIButton *)sender {
     AddTaskViewController *addVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AddTaskViewController"];
     addVC.delegate = self;
@@ -70,6 +77,7 @@
 }
 
 
+// Methods for arranging the table
 #pragma mark UITableViewDelegate methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return sortedKeys.count;
@@ -100,6 +108,7 @@
     [self performSegueWithIdentifier:@"Detailed" sender:tasksDict[sortedKeys[indexPath.section]][indexPath.row]];
 }
 
+// Listening to events on the addtaskcontroller
 #pragma mark AddTaskViewControllerDelegate methods 
 - (void)addTask:(AddTaskViewController *)taskVC addTaskParams:(NSDictionary *)taskParams {
     [[DataBaseManager instance] addTask:taskParams];

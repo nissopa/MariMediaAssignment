@@ -37,11 +37,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Initializing the DataBase
     [[DataBaseManager instance] initializeDB:^(NSManagedObjectContext *context) {
         if (context) {
             
         }
     }];
+    
+    
+    // Listening to the keyboard state
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardDidShow:)
                                                  name:UIKeyboardWillShowNotification
@@ -51,6 +56,8 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
     
+    
+    // Checks if need to present registration page or login page
     if (![DataBaseManager instance].userName) {
         loginButton.enabled = NO;
         retypeTF.hidden = NO;
@@ -72,15 +79,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)credentialsCorrect:(UIButton *)sender {
-    
-}
 
+
+// Checkbox for automatic fill of the credentials
 - (IBAction)rememberMePressed:(UIButton *)sender {
     sender.selected = !sender.selected;
     [DataBaseManager instance].remeberMe = sender.selected;
 }
 
+
+// Validation of the credentials before moving to the tasks page (in case that the user already enterd the app before)
 - (IBAction)loginPressed:(UIButton *)sender {
     if ([userName.text isEqualToString:[DataBaseManager instance].userName] && [passwordTF.text isEqualToString:[DataBaseManager instance].password]) {
         [self performSegueWithIdentifier:@"EnterTaskManager" sender:nil];
@@ -94,6 +102,8 @@
     }
 }
 
+
+// Validation of the values and storing it for next time
 - (IBAction)signInPressed:(UIButton *)sender {
     NSString *messageAlert = nil;
     if ([userName.text isEmailValid] && [passwordTF.text isEqualToString:retypeTF.text]) {
@@ -114,14 +124,19 @@
     [av show];
 }
 
+
+// Moving up all the UI elements for making space to the keyboard
 - (void)keyboardDidShow:(NSNotification *)notification {
     [self moveUIToYPos:-70];
 }
 
+
+// Moving down all the UI elements when the keyboard dissmissed
 - (void)keyboardDidHide:(NSNotification *)notification {
     [self moveUIToYPos:70];
 }
 
+// Animating the UI elements
 - (void)moveUIToYPos:(CGFloat)YPos {
     [UIView animateWithDuration:0.8
                           delay:0
@@ -137,6 +152,8 @@
                      }];
 }
 
+
+// Dissmissing the keyboard if touching the screen
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }

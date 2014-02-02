@@ -130,9 +130,6 @@ static NSString *RemeberMeKey = @"RemeberMeKey";
     return dict;
 }
 
-- (NSDictionary *)predicate:(NSString *)predicate {
-    return nil;
-}
 
 - (TasksCategory *)categoryByName:(NSString *)categoryName {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TasksCategory"];
@@ -162,6 +159,8 @@ static NSString *RemeberMeKey = @"RemeberMeKey";
     return nil;
 }
 
+
+// Credentials vars
 - (NSString *)userName {
     if (!_userName) {
         _userName = [[NSUserDefaults standardUserDefaults] objectForKey:UserNameKey];
