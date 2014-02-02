@@ -26,13 +26,13 @@
                                 <rect key="frame" x="20" y="151" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" id="CCi-HN-OiP">
                                 <rect key="frame" x="20" y="209" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w9E-ZD-6sh">
                                 <rect key="frame" x="9" y="313" width="48" height="48"/>
@@ -75,7 +75,7 @@
                                 <rect key="frame" x="20" y="264" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -83,9 +83,9 @@
                     <connections>
                         <outlet property="loginButton" destination="pSo-ky-s8g" id="hfP-Pu-lcP"/>
                         <outlet property="passwordTF" destination="CCi-HN-OiP" id="gXa-ka-0We"/>
+                        <outlet property="rememberMeButton" destination="w9E-ZD-6sh" id="jsc-UM-mwR"/>
                         <outlet property="retypeTF" destination="Hgr-Uk-vOX" id="QbU-Qe-DXm"/>
                         <outlet property="signInButton" destination="jJ2-1m-dfK" id="u7y-2R-uDb"/>
-                        <outlet property="start" destination="TZU-4r-TX5" id="J6K-nW-Ahx"/>
                         <outlet property="userName" destination="0e0-bY-bIJ" id="hq0-Jg-omG"/>
                         <segue destination="u5b-S1-dvG" kind="modal" identifier="EnterTaskManager" id="34b-RS-bmn"/>
                     </connections>

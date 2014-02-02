@@ -11,7 +11,7 @@
 #import "UIView+Position.h"
 
 @interface RegisterationViewController () {
-    __weak IBOutlet UIButton *start;
+    __weak IBOutlet UIButton *rememberMeButton;
     __weak IBOutlet UITextField *userName;
     __weak IBOutlet UITextField *passwordTF;
     __weak IBOutlet UITextField *retypeTF;
@@ -39,7 +39,7 @@
 	// Do any additional setup after loading the view.
     [[DataBaseManager instance] initializeDB:^(NSManagedObjectContext *context) {
         if (context) {
-            start.hidden = NO;
+            
         }
     }];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -60,6 +60,7 @@
         passwordTF.text = [DataBaseManager instance].password;
         loginButton.enabled = YES;
         signInButton.enabled = NO;
+        rememberMeButton.selected = YES;
     } else if ([DataBaseManager instance].userName) {
         loginButton.enabled = YES;
         signInButton.enabled = NO;
