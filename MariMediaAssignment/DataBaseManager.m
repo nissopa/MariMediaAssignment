@@ -110,17 +110,6 @@
     return [self arrangeInDictionary:matches];
 }
 
-
-//- (NSDictionary *)tasksByCategory {
-//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Tasks"];
-//    NSError *error = nil;
-//    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"taskCategory.categoryName" ascending:YES],
-//                                [NSSortDescriptor sortDescriptorWithKey:@"taskTitle" ascending:YES]];
-//    NSArray *matches = [_context executeFetchRequest:request
-//                                               error:&error];
-//    return [self arrangeInDictionary:matches];
-//}
-
 - (NSDictionary *)arrangeInDictionary:(NSArray *)sortedTasks {
     NSMutableDictionary *dict = [NSMutableDictionary new];
     for (Tasks *task in sortedTasks) {
